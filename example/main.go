@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Boletia/conekta-go/conekta"
+	"github.com/UseKiwi/conekta-go/conekta"
 	"log"
 )
 

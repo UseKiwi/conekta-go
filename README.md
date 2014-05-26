@@ -14,14 +14,14 @@ First, get your account's private [API key](https://admin.conekta.io/#developers
 
 Get the package
 
-    go get github.com/Boletia/conekta-go/conekta
+    go get github.com/UseKiwi/conekta-go/conekta
 
 ## Usage
 
 ~~~ go
 package main
 
-import "github.com/Boletia/conekta"
+import "github.com/UseKiwi/conekta"
 
 func main() {
   client := conekta.NewClient()
