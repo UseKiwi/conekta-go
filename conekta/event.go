@@ -1,6 +1,6 @@
 package conekta
 
-type ConektaEvent struct {
+type Event struct {
 	Id        string     `json:"id"`
 	Type      string     `json:"type,omitempty"`
 	CreatedAt *timestamp `json:"created_at,omitempty"`

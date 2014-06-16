@@ -7,7 +7,7 @@ import (
 )
 
 func TestExtractEventType(t *testing.T) {
-	var event ConektaEvent
+	var event Event
 	resp := []byte(Fixtures["event"])
 	err := json.NewDecoder(bytes.NewReader(resp)).Decode(&event)
 	if err != nil {
