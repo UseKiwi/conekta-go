@@ -186,6 +186,44 @@ func renderJSONFixture(res http.ResponseWriter, status int, fixtureName string) 
 }
 
 var Fixtures = map[string]string{
+	"event":`{
+		"id":"521154c132611f5bc0000029",
+	  	"type":"charge.paid",
+	  	"created_at":1376867521,
+	  	"data":{
+			"object":{
+		  		"id":"521154c032611f5bc0000028",
+		  		"object":"charge",
+				"livemode":false,
+				"created_at":1376867520,
+				"status":"paid",
+				"currency":"MXN",
+				"description":"Autocinema Coyote - Eterno resplandor de una mente sin recuerdos",
+				"reference_id":"XXYYZZ-TEST1234",
+				"failure_code":"",
+				"failure_message":null,
+				"amount":20000,
+				"paid_at":1377021230,
+				"fee":1160,
+				"payment_method":{
+					"object":"bank_transfer_payment",
+					"service_name":"Conekta",
+					"service_number":"127589",
+					"type":"banorte",
+					"reference":"0007131"
+				},
+				"details":{
+					"name":"Gustavo Delgado",
+					"phone":"5555555555",
+					"email":"gustavo.delgado@gmail.com"
+				}
+			},
+    		"previous_attributes":{
+      			"status":"pending_payment",
+      			"paid_at":1377021230
+    		}
+  		}
+	}`,
 	"subscription": `{
 		"id":"sub_EfhFCp5SKvp5XzXQk",
   		"status":"in_trial",
