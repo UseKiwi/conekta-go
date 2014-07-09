@@ -1,8 +1,6 @@
 package conekta
 
-import (
-	"fmt"
-)
+import "fmt"
 
 type chargesResource struct {
 	client *Client
@@ -127,7 +125,7 @@ func (s *chargesResource) Refund(id string, amount Param) (*Charge, error) {
 }
 
 func (s *chargesResource) Filter(options FilterOptions) ([]Charge, error) {
-	req, err := s.client.prepareRequest("GET", s.path, nil)
+	req, err := s.client.prepareRequest("GET", s.path+options.Q(), nil)
 	if err != nil {
 		return nil, err
 	}
