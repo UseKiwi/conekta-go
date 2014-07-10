@@ -42,8 +42,6 @@ import (
 	"net/url"
 	"os"
 	"runtime"
-	"strconv"
-	"time"
 )
 
 const (
@@ -81,25 +79,7 @@ type GonektaError struct {
 	Message string `json:"message"`
 }
 
-type timestamp struct {
-	time.Time
-}
-
 type Param map[string]interface{}
-
-func (t timestamp) String() string {
-	return t.Time.String()
-}
-
-func (ts *timestamp) UnmarshalJSON(b []byte) error {
-	result, err := strconv.ParseInt(string(b), 10, 64)
-	if err == nil {
-		(*ts).Time = time.Unix(result, 0)
-	} else {
-		(*ts).Time, err = time.Parse(`"`+time.RFC3339+`"`, string(b))
-	}
-	return err
-}
 
 // NewClient returns a configured conekta client. All requests to the API
 // go through this value.
